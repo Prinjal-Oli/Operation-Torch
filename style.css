@@ -1,1 +1,351 @@
+/* ================================
+   OPERATION TORCH WEBSITE
+   WWII MILITARY HISTORY THEME
+================================ */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background:
+        linear-gradient(rgba(20, 25, 20, 0.94), rgba(20, 25, 20, 0.94)),
+        url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e8e3d5;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(25, 30, 24, 0.65),
+            rgba(25, 30, 24, 0.9)
+        ),
+        url("images/operation-torch-header.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 4px solid #b59b63;
+}
+
+header h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    letter-spacing: 8px;
+    color: #d6c18b;
+    text-shadow: 3px 3px 8px #000;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #e6dfca;
+    letter-spacing: 2px;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    padding: 12px 10px;
+
+    background: rgba(22, 26, 21, 0.97);
+    border-bottom: 1px solid #756744;
+}
+
+nav a {
+    color: #d8cfb6;
+    text-decoration: none;
+
+    padding: 9px 16px;
+
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #76643e;
+    color: white;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 25px;
+}
+
+section {
+    margin-bottom: 80px;
+    scroll-margin-top: 80px;
+}
+
+section h2 {
+    font-size: 2.4rem;
+    color: #d6c18b;
+
+    margin-bottom: 25px;
+
+    border-left: 5px solid #a68b55;
+    padding-left: 15px;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section p {
+    max-width: 950px;
+    margin-bottom: 18px;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: rgba(45, 50, 42, 0.9);
+
+    border: 1px solid #746847;
+    border-radius: 5px;
+
+    padding: 28px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: #c4aa6d;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55);
+}
+
+.card h3 {
+    color: #d4bc82;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: #d8d4c8;
+}
+
+
+/* ================================
+   LINKS / BUTTONS
+================================ */
+
+.card a {
+    display: inline-block;
+
+    margin-top: 12px;
+    padding: 9px 17px;
+
+    background: #75633e;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+.card a:hover {
+    background: #a68b55;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   TIMELINE
+================================ */
+
+.timeline {
+    position: relative;
+
+    max-width: 900px;
+
+    margin: 40px auto 0;
+    padding-left: 35px;
+
+    border-left: 3px solid #9b8350;
+}
+
+.timeline div {
+    position: relative;
+
+    margin-bottom: 35px;
+
+    padding: 20px 25px;
+
+    background: rgba(45, 50, 42, 0.85);
+
+    border: 1px solid #665b42;
+}
+
+.timeline div::before {
+    content: "";
+
+    position: absolute;
+
+    width: 14px;
+    height: 14px;
+
+    background: #b59b63;
+
+    border: 3px solid #1b201a;
+    border-radius: 50%;
+
+    left: -45px;
+    top: 25px;
+}
+
+.timeline strong {
+    color: #d7bf82;
+    font-size: 1.2rem;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background: #171b17;
+
+    border-top: 2px solid #766744;
+
+    color: #aaa28f;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* ================================
+   ANIMATION
+================================ */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeUp 0.8s ease both;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    header {
+        min-height: 330px;
+    }
+
+    header h1 {
+        letter-spacing: 4px;
+    }
+
+    nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    nav a {
+        white-space: nowrap;
+    }
+
+    main {
+        padding: 40px 18px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .timeline div::before {
+        left: -35px;
+    }
+}
