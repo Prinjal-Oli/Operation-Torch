@@ -1,68 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Operation Torch | North Africa 1942</title>
 
+    <meta
+        name="description"
+        content="A digital historical resource exploring Operation Torch, the Allied invasion of French North Africa in 1942."
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>OPERATION TORCH</h1>
-        <p>Allied Invasion of French North Africa — 1942</p>
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="site-header">
+
+        <div class="brand">
+            <div class="brand-icon">⚔</div>
+
+            <div>
+                <h2>OPERATION TORCH</h2>
+                <span>NORTH AFRICA — 1942</span>
+            </div>
+        </div>
+
+        <nav id="mainNav">
+
+            <a href="#home" class="nav-link active">
+                <span>⌂</span> Home
+            </a>
+
+            <a href="#overview" class="nav-link">
+                <span>▤</span> Overview
+            </a>
+
+            <a href="#forces" class="nav-link">
+                <span>♟</span> Forces
+            </a>
+
+            <a href="#plans" class="nav-link">
+                <span>◈</span> Plans
+            </a>
+
+            <a href="#timeline" class="nav-link">
+                <span>◷</span> Timeline
+            </a>
+
+            <a href="#resources" class="nav-link">
+                <span>▣</span> Resources
+            </a>
+
+            <a href="#references" class="nav-link">
+                <span>▥</span> References
+            </a>
+
+            <button id="themeButton" class="theme-button" aria-label="Change appearance">
+                ☼
+            </button>
+
+        </nav>
+
     </header>
 
-    <nav>
-        <a href="#overview">Overview</a>
-        <a href="#forces">Forces</a>
-        <a href="#plans">Plans</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#resources">Resources</a>
-        <a href="#references">References</a>
-    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                ALLIED INVASION OF FRENCH NORTH AFRICA
+            </p>
+
+            <h1>OPERATION<br><span>TORCH</span></h1>
+
+            <div class="hero-date">
+                8 — 16 NOVEMBER 1942
+            </div>
+
+            <p class="hero-description">
+                A major Allied operation that opened a new front in the
+                Second World War and changed the strategic situation
+                in North Africa.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#overview" class="primary-button">
+                    EXPLORE THE STORY →
+                </a>
+
+                <a href="#plans" class="secondary-button">
+                    ◈ VIEW OPERATION
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+            <span>SCROLL TO EXPLORE</span>
+            <div>↓</div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUICK FACTS ================= -->
+
+    <section class="quick-facts">
+
+        <div class="quick-fact">
+
+            <span class="fact-icon">◷</span>
+
+            <div>
+                <small>DATE</small>
+                <strong>8–16 Nov 1942</strong>
+            </div>
+
+        </div>
+
+
+        <div class="quick-fact">
+
+            <span class="fact-icon">⌖</span>
+
+            <div>
+                <small>LOCATIONS</small>
+                <strong>Casablanca • Oran • Algiers</strong>
+            </div>
+
+        </div>
+
+
+        <div class="quick-fact">
+
+            <span class="fact-icon">♟</span>
+
+            <div>
+                <small>ALLIED FORCES</small>
+                <strong>Large Anglo-American force</strong>
+            </div>
+
+        </div>
+
+
+        <div class="quick-fact">
+
+            <span class="fact-icon">⚔</span>
+
+            <div>
+                <small>OPPOSING FORCE</small>
+                <strong>Vichy French forces</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
 
     <main>
 
-        <section id="overview">
-            <h2>Operation Torch</h2>
 
-            <p>
-                Operation Torch was the Allied invasion of French North Africa
-                during the Second World War. The operation began on
-                8 November 1942 and involved American and British forces.
-            </p>
+        <!-- ================= DID YOU KNOW ================= -->
 
-            <p>
-                The landings took place at Casablanca, Oran and Algiers,
-                opening a major Allied campaign in North Africa.
-            </p>
-        </section>
+        <section class="did-you-know-section">
 
+            <div class="parchment">
 
-        <section id="forces">
-
-            <h2>Relative Strength</h2>
-
-            <div class="cards">
-
-                <div class="card">
-                    <h3>Allied Forces</h3>
-                    <p>
-                        American and British forces conducted amphibious
-                        landings supported by naval and air power.
-                    </p>
+                <div class="compass">
+                    <div class="compass-inner">
+                        N<br>
+                        <span>✦</span><br>
+                        S
+                    </div>
                 </div>
 
-                <div class="card">
-                    <h3>Vichy French Forces</h3>
+                <div class="did-you-know-title">
+
+                    <span class="section-small-title">
+                        HISTORICAL ARCHIVE
+                    </span>
+
+                    <h2>DID YOU KNOW?</h2>
+
                     <p>
-                        French forces in North Africa initially opposed
-                        the Allied landings before the fighting ended.
+                        Discover another fact about Operation Torch.
                     </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="fact-box">
+
+                <div class="fact-box-header">
+
+                    <span>
+                        OPERATION TORCH • FIELD NOTE
+                    </span>
+
+                    <div class="fact-counter">
+                        <span id="factNumber">1</span>
+                        /
+                        <span id="totalFacts">8</span>
+                    </div>
+
+                </div>
+
+
+                <div class="fact-content">
+
+                    <div class="fact-symbol">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <h3 id="factTitle">
+                            The operation involved three major landing areas.
+                        </h3>
+
+                        <p id="factText">
+                            Allied forces landed around Casablanca,
+                            Oran and Algiers in French North Africa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="fact-controls">
+
+                    <button id="previousFact" class="round-button">
+                        ←
+                    </button>
+
+                    <button id="nextFact" class="next-fact-button">
+                        DISCOVER ANOTHER FACT →
+                    </button>
+
                 </div>
 
             </div>
@@ -70,26 +261,70 @@
         </section>
 
 
-        <section id="plans">
+        <!-- ================= OVERVIEW ================= -->
 
-            <h2>Operational Plans</h2>
+        <section id="overview" class="content-section reveal">
 
-            <div class="cards">
+            <div class="section-heading">
 
-                <div class="card">
-                    <h3>Allied Plan</h3>
-                    <p>
-                        The Allies planned simultaneous landings at
-                        Casablanca, Oran and Algiers.
+                <span>01 — THE STORY</span>
+
+                <h2>Operation Torch</h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+
+            <div class="overview-grid">
+
+                <div class="overview-text">
+
+                    <p class="large-text">
+                        Operation Torch was the Allied invasion of
+                        French North Africa during the Second World War.
                     </p>
+
+                    <p>
+                        The operation began on 8 November 1942 and
+                        involved American and British forces conducting
+                        amphibious landings at Casablanca, Oran and
+                        Algiers.
+                    </p>
+
+                    <p>
+                        The operation was designed to establish an
+                        Allied presence in North Africa and create
+                        pressure on Axis forces operating in the
+                        Mediterranean region.
+                    </p>
+
+                    <p>
+                        The campaign also demonstrated the growing
+                        ability of American forces to conduct a large
+                        overseas amphibious operation alongside
+                        British forces.
+                    </p>
+
                 </div>
 
-                <div class="card">
-                    <h3>French Defence</h3>
+
+                <div class="overview-highlight">
+
+                    <div class="highlight-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Major Landing Areas
+                    </h3>
+
                     <p>
-                        Vichy French forces prepared to defend the
-                        strategically important ports and coastal areas.
+                        Casablanca<br>
+                        Oran<br>
+                        Algiers
                     </p>
+
                 </div>
 
             </div>
@@ -97,30 +332,282 @@
         </section>
 
 
-        <section id="timeline">
+        <!-- ================= FORCES ================= -->
 
-            <h2>Timeline</h2>
+        <section id="forces" class="content-section reveal">
+
+            <div class="section-heading">
+
+                <span>02 — OPPOSING FORCES</span>
+
+                <h2>Relative Strength</h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+
+            <div class="force-grid">
+
+
+                <article class="force-card allied">
+
+                    <div class="force-number">
+                        A
+                    </div>
+
+                    <span class="card-label">
+                        ALLIED FORCES
+                    </span>
+
+                    <h3>
+                        American & British
+                    </h3>
+
+                    <p>
+                        The invasion force consisted mainly of
+                        American and British troops supported by
+                        naval and air forces.
+                    </p>
+
+                    <ul>
+                        <li>Large amphibious force</li>
+                        <li>Naval support</li>
+                        <li>Air support</li>
+                        <li>Multiple landing groups</li>
+                    </ul>
+
+                </article>
+
+
+                <article class="force-card french">
+
+                    <div class="force-number">
+                        F
+                    </div>
+
+                    <span class="card-label">
+                        VICHY FRENCH FORCES
+                    </span>
+
+                    <h3>
+                        French North African Forces
+                    </h3>
+
+                    <p>
+                        French forces stationed in North Africa
+                        initially resisted the Allied landings.
+                    </p>
+
+                    <ul>
+                        <li>Coastal defence positions</li>
+                        <li>Artillery and naval units</li>
+                        <li>Aircraft</li>
+                        <li>Fortified ports</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PLANS ================= -->
+
+        <section id="plans" class="content-section reveal">
+
+            <div class="section-heading">
+
+                <span>03 — OPERATIONAL PLANS</span>
+
+                <h2>Plans & Defence</h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+
+            <div class="plans-grid">
+
+                <article class="plan-card">
+
+                    <div class="plan-icon">
+                        ⚓
+                    </div>
+
+                    <h3>
+                        Allied Plan
+                    </h3>
+
+                    <p>
+                        Allied planners organized simultaneous
+                        amphibious landings in three major areas.
+                    </p>
+
+                    <div class="plan-list">
+                        <span>01</span>
+                        <p>Western Task Force — Casablanca</p>
+
+                        <span>02</span>
+                        <p>Center Task Force — Oran</p>
+
+                        <span>03</span>
+                        <p>Eastern Task Force — Algiers</p>
+                    </div>
+
+                </article>
+
+
+                <article class="plan-card">
+
+                    <div class="plan-icon">
+                        🛡
+                    </div>
+
+                    <h3>
+                        French Defence
+                    </h3>
+
+                    <p>
+                        Vichy French commanders faced the difficult
+                        decision of resisting the Allied landings or
+                        negotiating with them.
+                    </p>
+
+                    <div class="plan-list">
+
+                        <span>01</span>
+                        <p>Defend strategic ports</p>
+
+                        <span>02</span>
+                        <p>Use coastal artillery</p>
+
+                        <span>03</span>
+                        <p>Respond to Allied landings</p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TIMELINE ================= -->
+
+        <section id="timeline" class="timeline-section reveal">
+
+            <div class="section-heading centered">
+
+                <span>04 — CHRONOLOGY</span>
+
+                <h2>The Key Dates</h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
 
             <div class="timeline">
 
-                <div>
-                    <strong>8 November 1942</strong>
-                    <p>Allied landings began in French North Africa.</p>
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        08 NOV 1942
+                    </div>
+
+                    <div class="timeline-marker"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>
+                            Allied Landings Begin
+                        </h3>
+
+                        <p>
+                            Allied forces begin amphibious landings
+                            at Casablanca, Oran and Algiers.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div>
-                    <strong>9–10 November</strong>
-                    <p>
-                        Fighting continued around the landing areas.
-                    </p>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        09–10 NOV
+                    </div>
+
+                    <div class="timeline-marker"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>
+                            Fighting Continues
+                        </h3>
+
+                        <p>
+                            Fighting continues around several landing
+                            areas as Allied forces attempt to secure
+                            their objectives.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div>
-                    <strong>11 November 1942</strong>
-                    <p>
-                        Fighting ended following agreements between
-                        Allied and French authorities.
-                    </p>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        11 NOV 1942
+                    </div>
+
+                    <div class="timeline-marker"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>
+                            Fighting in Morocco and Algeria Ends
+                        </h3>
+
+                        <p>
+                            Agreements lead to the end of organized
+                            resistance by French forces in the main
+                            landing areas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        16 NOV 1942
+                    </div>
+
+                    <div class="timeline-marker"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>
+                            Consolidation
+                        </h3>
+
+                        <p>
+                            Allied forces continue consolidating their
+                            positions as the wider North African
+                            campaign develops.
+                        </p>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -128,70 +615,291 @@
         </section>
 
 
-        <section id="resources">
+        <!-- ================= RESOURCE CARDS ================= -->
 
-            <h2>Digital Resources</h2>
+        <section id="resources" class="content-section reveal">
 
-            <div class="cards">
+            <div class="section-heading">
 
-                <div class="card">
-                    <h3>📄 Presentation</h3>
-                    <p>Operation Torch presentation and related documents.</p>
-                    <a href="pdfs/operation-torch-presentation.pdf">
-                        Open PDF
-                    </a>
-                </div>
+                <span>05 — DIGITAL ARCHIVE</span>
 
-                <div class="card">
-                    <h3>📝 Scripts</h3>
-                    <p>Presentation and narration scripts.</p>
-                    <a href="scripts/">
-                        View Scripts
-                    </a>
-                </div>
+                <h2>Explore the Resources</h2>
 
-                <div class="card">
-                    <h3>🖼️ Images</h3>
-                    <p>Historical photographs, maps and illustrations.</p>
-                    <a href="images/">
-                        View Images
-                    </a>
-                </div>
+                <div class="heading-line"></div>
 
-                <div class="card">
-                    <h3>🎬 Videos</h3>
-                    <p>Operation Torch videos and related media.</p>
-                    <a href="videos/">
-                        View Videos
-                    </a>
-                </div>
+            </div>
+
+
+            <div class="resource-grid">
+
+
+                <a href="pdfs/operation-torch-presentation.pdf"
+                   class="resource-card">
+
+                    <div class="resource-image presentation-image">
+                        📖
+                    </div>
+
+                    <div class="resource-info">
+
+                        <span>DOCUMENT</span>
+
+                        <h3>
+                            Presentation
+                        </h3>
+
+                        <p>
+                            View the complete Operation Torch
+                            presentation.
+                        </p>
+
+                        <strong>
+                            OPEN RESOURCE →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a href="scripts/"
+                   class="resource-card">
+
+                    <div class="resource-image script-image">
+                        ✎
+                    </div>
+
+                    <div class="resource-info">
+
+                        <span>TEXT</span>
+
+                        <h3>
+                            Scripts
+                        </h3>
+
+                        <p>
+                            Presentation and narration scripts.
+                        </p>
+
+                        <strong>
+                            VIEW SCRIPTS →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a href="images/"
+                   class="resource-card">
+
+                    <div class="resource-image photo-image">
+                        ▣
+                    </div>
+
+                    <div class="resource-info">
+
+                        <span>ARCHIVE</span>
+
+                        <h3>
+                            Images
+                        </h3>
+
+                        <p>
+                            Historical photographs, maps and
+                            illustrations.
+                        </p>
+
+                        <strong>
+                            VIEW IMAGES →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a href="videos/"
+                   class="resource-card">
+
+                    <div class="resource-image video-image">
+                        ▶
+                    </div>
+
+                    <div class="resource-info">
+
+                        <span>MEDIA</span>
+
+                        <h3>
+                            Videos
+                        </h3>
+
+                        <p>
+                            Videos and other Operation Torch media.
+                        </p>
+
+                        <strong>
+                            WATCH MEDIA →
+                        </strong>
+
+                    </div>
+
+                </a>
 
             </div>
 
         </section>
 
 
-        <section id="references">
+        <!-- ================= REFERENCES ================= -->
 
-            <h2>References</h2>
+        <section id="references" class="references-section reveal">
 
-            <p>
-                Sources, books, websites and other references used
-                for the Operation Torch project.
-            </p>
+            <div class="section-heading">
+
+                <span>06 — SOURCES</span>
+
+                <h2>References</h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+
+            <div class="reference-box">
+
+                <div class="reference-symbol">
+                    📚
+                </div>
+
+                <div>
+
+                    <h3>
+                        Historical Sources
+                    </h3>
+
+                    <p>
+                        Books, websites, documentaries, maps and
+                        other historical sources used during the
+                        preparation of this Operation Torch project.
+                    </p>
+
+                    <p>
+                        The resources are provided to support further
+                        study and understanding of the operation.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
+
 
     </main>
 
 
+    <!-- ================= QUOTE / CLOSING ================= -->
+
+    <section class="closing-section">
+
+        <div class="closing-inner">
+
+            <span>
+                OPERATION TORCH
+            </span>
+
+            <h2>
+                Not just a landing,<br>
+                but the beginning of a new chapter.
+            </h2>
+
+            <p>
+                North Africa — 1942
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
     <footer>
-        <p>Operation Torch — North Africa, 1942</p>
-        <p>Digital Historical Resource</p>
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <div class="footer-icon">
+                    ⚔
+                </div>
+
+                <div>
+
+                    <h3>
+                        OPERATION TORCH
+                    </h3>
+
+                    <span>
+                        NORTH AFRICA — 1942
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+
+                    <strong>
+                        QUICK LINKS
+                    </strong>
+
+                    <a href="#overview">Overview</a>
+                    <a href="#forces">Forces</a>
+                    <a href="#plans">Plans</a>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        EXPLORE
+                    </strong>
+
+                    <a href="#timeline">Timeline</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#references">References</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="currentYear"></span>
+                Operation Torch Resource Project
+            </span>
+
+            <span>
+                LEARN • EXPLORE • REMEMBER
+            </span>
+
+        </div>
+
     </footer>
 
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
