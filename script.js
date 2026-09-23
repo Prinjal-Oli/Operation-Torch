@@ -1,40 +1,31 @@
-/* =====================================================
-   OPERATION TORCH
-   INTERACTIVE SCRIPT
-===================================================== */
+// ========================================
+// OPERATION TORCH WEBSITE
+// INTERACTIVE JAVASCRIPT
+// ========================================
 
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(link => {
 
-const menuButton =
-    document.getElementById("menuButton");
+    link.addEventListener('click', function (event) {
 
-const navigation =
-    document.getElementById("navigation");
+        const targetId = this.getAttribute('href');
 
+        if (targetId.startsWith('#')) {
 
-menuButton.addEventListener(
-    "click",
-    () => {
+            event.preventDefault();
 
-        navigation.classList.toggle("open");
+            const targetSection = document.querySelector(targetId);
 
-        if (
-            navigation.classList.contains("open")
-        ) {
-
-            menuButton.textContent = "✕";
-
-        } else {
-
-            menuButton.textContent = "☰";
-
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
+    });
 
-<<<<<<< HEAD
-=======
 });
 
 
@@ -50,7 +41,8 @@ if (factPlayer) {
     const factProgress = factPlayer.querySelector('[data-fact-progress]');
     let currentFact = -1;
 
-    factButton.addEventListener('click', () => {
+    if (factButton && factContent && factStatus && factCount && factProgress && factEntries.length) {
+        factButton.addEventListener('click', () => {
         currentFact = (currentFact + 1) % factEntries.length;
         const entry = factEntries[currentFact];
 
@@ -62,7 +54,8 @@ if (factPlayer) {
         factCount.textContent = `${String(currentFact + 1).padStart(2, '0')} / ${factEntries.length}`;
         factButton.textContent = currentFact === factEntries.length - 1 ? 'Start again' : 'Next fact';
         factProgress.style.width = `${((currentFact + 1) / factEntries.length) * 100}%`;
-    });
+        });
+    }
 }
 
 
@@ -101,7 +94,9 @@ if (quiz) {
                     question.querySelector(`[data-option="${correctOption}"]`).classList.add('quiz-option--correct');
                 }
 
-                scoreElement.textContent = `Score: ${score} / ${questions.length}`;
+                if (scoreElement) {
+                    scoreElement.textContent = `Score: ${score} / ${questions.length}`;
+                }
             });
         });
     });
@@ -132,301 +127,86 @@ const observer = new IntersectionObserver(
     },
     {
         threshold: 0.15
->>>>>>> 4ac129e (Update Operation Torch resource archive)
     }
 );
 
 
-/* Close menu when a link is selected */
+sections.forEach(section => {
 
-const navigationLinks =
-    document.querySelectorAll(
-        "#navigation a"
-    );
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(25px)';
+    section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
 
-
-navigationLinks.forEach(link => {
-
-    link.addEventListener(
-        "click",
-        () => {
-
-            navigation.classList.remove(
-                "open"
-            );
-
-            menuButton.textContent = "☰";
-
-        }
-    );
+    observer.observe(section);
 
 });
 
 
+// ========================================
+// ACTIVE NAVIGATION
+// ========================================
 
-/* =====================================================
-   DID YOU KNOW
-===================================================== */
+const navLinks = document.querySelectorAll('nav a');
 
-const facts = [
+const sectionObserver = new IntersectionObserver(
+    (entries) => {
 
-    {
-        title:
-            "The operation had three major landing areas.",
+        entries.forEach(entry => {
 
-        text:
-            "Allied forces landed around Casablanca, Oran and Algiers in French North Africa."
+            if (entry.isIntersecting) {
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                const activeLink = document.querySelector(
+                    `nav a[href="#${entry.target.id}"]`
+                );
+
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+
+            }
+
+        });
+
     },
-
     {
-        title:
-            "Operation Torch began on 8 November 1942.",
-
-        text:
-            "The invasion began with simultaneous amphibious landings across several locations in French North Africa."
-    },
-
-    {
-        title:
-            "The operation was mainly an Anglo-American effort.",
-
-        text:
-            "American and British forces worked together during one of the major Allied operations of 1942."
-    },
-
-    {
-        title:
-            "The Western Task Force targeted Casablanca.",
-
-        text:
-            "The Western Task Force was commanded by Major General George S. Patton and operated in the Casablanca area."
-    },
-
-    {
-        title:
-            "The operation created a complicated political situation.",
-
-        text:
-            "The Allies were attacking territory controlled by Vichy France, making the military situation politically sensitive."
-    },
-
-    {
-        title:
-            "Naval power was essential to the invasion.",
-
-        text:
-            "Ships transported troops and equipment while naval forces supported and protected the amphibious landings."
-    },
-
-    {
-        title:
-            "Operation Torch opened a new Allied front.",
-
-        text:
-            "The operation established an Allied presence in North Africa and supported subsequent operations in the region."
-    },
-
-    {
-        title:
-            "Torch was part of the wider North African campaign.",
-
-        text:
-            "The operation contributed to the wider Allied campaign that continued in North Africa after the initial landings."
+        threshold: 0.4
     }
-
-];
-
-
-let currentFact = 0;
+);
 
 
-const factTitle =
-    document.getElementById(
-        "factTitle"
-    );
+sections.forEach(section => {
+    sectionObserver.observe(section);
+});
 
 
-const factText =
-    document.getElementById(
-        "factText"
-    );
+// ========================================
+// FOOTER YEAR
+// ========================================
 
+const yearElement = document.querySelector('footer');
 
-const factNumber =
-    document.getElementById(
-        "factNumber"
-    );
+if (yearElement) {
 
+    const currentYear = new Date().getFullYear();
 
-const totalFacts =
-    document.getElementById(
-        "totalFacts"
-    );
-
-
-const nextFact =
-    document.getElementById(
-        "nextFact"
-    );
-
-
-const previousFact =
-    document.getElementById(
-        "previousFact"
-    );
-
-
-totalFacts.textContent =
-    facts.length;
-
-
-
-function displayFact(index) {
-
-    factTitle.classList.remove(
-        "fact-changing"
-    );
-
-    factText.classList.remove(
-        "fact-changing"
-    );
-
-
-    void factTitle.offsetWidth;
-
-
-    factTitle.textContent =
-        facts[index].title;
-
-
-    factText.textContent =
-        facts[index].text;
-
-
-    factNumber.textContent =
-        index + 1;
-
-
-    factTitle.classList.add(
-        "fact-changing"
-    );
-
-    factText.classList.add(
-        "fact-changing"
-    );
+    yearElement.innerHTML +=
+        `<p>© ${currentYear} Operation Torch Resource Project</p>`;
 
 }
 
 
-nextFact.addEventListener(
-    "click",
-    () => {
+// ========================================
+// PAGE LOADED MESSAGE
+// ========================================
 
-        currentFact++;
+window.addEventListener('load', () => {
 
-        if (
-            currentFact >= facts.length
-        ) {
-
-            currentFact = 0;
-
-        }
-
-        displayFact(currentFact);
-
-    }
-);
-
-
-previousFact.addEventListener(
-    "click",
-    () => {
-
-        currentFact--;
-
-        if (currentFact < 0) {
-
-            currentFact =
-                facts.length - 1;
-
-        }
-
-        displayFact(currentFact);
-
-    }
-);
-
-
-
-/* =====================================================
-   SCROLL REVEAL
-===================================================== */
-
-const revealElements =
-    document.querySelectorAll(
-        ".reveal"
+    console.log(
+        'Operation Torch resource website loaded successfully.'
     );
 
-
-const revealObserver =
-    new IntersectionObserver(
-
-        entries => {
-
-            entries.forEach(
-                entry => {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-                        revealObserver.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                }
-            );
-
-        },
-
-        {
-            threshold: 0.12
-        }
-
-    );
-
-
-revealElements.forEach(
-    element => {
-
-        revealObserver.observe(
-            element
-        );
-
-    }
-);
-
-
-
-/* =====================================================
-   CURRENT YEAR
-===================================================== */
-
-document.getElementById(
-    "year"
-).textContent =
-    new Date().getFullYear();
-
-
-
-/* =====================================================
-   INITIAL FACT
-===================================================== */
-
-displayFact(0);
+});
